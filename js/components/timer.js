@@ -41,7 +41,7 @@ export function startTimer() {
   if (!board.time) {
     board.time = Date.now();
   }
-
+  refs.exercise.next.disabled = false;
   refs.exercise.product.disabled = false;
   refs.exercise.product.focus();
 
@@ -49,7 +49,7 @@ export function startTimer() {
   let minutes = parseInt(refs.timer.min.textContent) || 0;
 
   if (isNaN(minutes) || isNaN(seconds)) {
-    console.error('Невалідні значення таймера');
+    console.error("Timer's weightless values");
     return;
   }
 
@@ -147,8 +147,8 @@ export function applyTimerSetting(event) {
       }
       if (set.timerSet === 'on') {
         refs.timer.set.textContent = set.lang === 'en' ? 'Stop' : 'Зупинити';
-      } else {
-        refs.timer.set.textContent = translate[set.lang].timer.set;
+      } else if (set.timerSet === 'off') {
+        refs.timer.set.textContent = set.lang === 'en' ? 'Set!' : 'Встановити!';
       }
       break;
   }
@@ -170,5 +170,10 @@ export function resetTimer() {
   refs.timer.input.disabled =
     set.mode === 'challenge' ? true : set.mode === 'manual' ? true : false;
   refs.timer.set.disabled = true;
+  if (set.timerSet === 'on') {
+    refs.timer.set.textContent = set.lang === 'en' ? 'Stop' : 'Зупинити';
+  } else if (set.timerSet === 'off') {
+    refs.timer.set.textContent = set.lang === 'en' ? 'Set!' : 'Встановити!';
+  }
   setLocal(refs.LOCAL_KEY, set);
 }

@@ -43,11 +43,10 @@ export function makeTranslate(translate, refs, lang, prefix = '') {
       }
 
       if (ref) {
-        // Визначаємо, чи є значення HTML-кодом (перевіряємо наявність тегів)
         if (value.includes('<') && value.includes('>')) {
-          ref.innerHTML = value; // Вставляємо HTML
+          ref.innerHTML = value;
         } else {
-          ref.textContent = value; // Інакше вставляємо як текст
+          ref.textContent = value;
         }
       }
     }
@@ -72,4 +71,5 @@ export function makeModal() {
                 <p class="modal__data">${board.wrong.length}</p>
               </li>`;
   refs.modal.markup.innerHTML = markUp;
+  makeTranslate(translate, refs, set.lang);
 }

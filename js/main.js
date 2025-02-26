@@ -100,19 +100,27 @@ refs.timer.input.addEventListener('input', (event) => {
 });
 
 refs.timer.input.addEventListener('click', (event) => {
-  event.target.selectionStart = event.target.selectionEnd =
-    event.target.value.length;
+  event.target.setSelectionRange(
+    event.target.value.length,
+    event.target.value.length
+  );
 });
 
 refs.timer.input.addEventListener('keydown', (event) => {
-  event.target.selectionStart = event.target.selectionEnd =
-    event.target.value.length;
+  setTimeout(() => {
+    event.target.setSelectionRange(
+      event.target.value.length,
+      event.target.value.length
+    );
+  });
 });
 
 refs.timer.input.addEventListener('select', (event) => {
-  e.preventDefault();
-  event.target.selectionStart = event.target.selectionEnd =
-    event.target.value.length;
+  event.preventDefault();
+  event.target.setSelectionRange(
+    event.target.value.length,
+    event.target.value.length
+  );
 });
 
 refs.exercise.product.addEventListener('keypress', (event) => {
