@@ -54,7 +54,6 @@ refs.tutor.next.addEventListener('click', (event) => {
 
 refs.settings.reset.addEventListener('click', (event) => {
   resetSettings();
-  resetBoard();
   location.reload();
 });
 
