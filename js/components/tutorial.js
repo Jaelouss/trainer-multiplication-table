@@ -3,6 +3,7 @@ import { set } from './settings.js';
 import { classAdd, classRemove } from './classChange.js';
 import { markup } from './markup.js';
 import { setLocal } from './localStorage.js';
+import { setStandartSettings } from './mode.js';
 
 export function openTutor() {
   let windows = [
@@ -42,6 +43,7 @@ function addZindexForElements() {
   if (set.tutor === 0) {
     set.mode = 'main';
     markup();
+    setStandartSettings();
     classAdd(refs.box.timerParagraphBox, 'up');
   } else if (set.tutor === 1) {
     classRemove(refs.box.timerParagraphBox, 'up');
@@ -74,6 +76,7 @@ function addZindexForElements() {
 
     set.mode = 'manual';
     markup();
+    setStandartSettings();
     classAdd(refs.mode.manual, 'up');
     classAdd(refs.exercise.factorOne, 'up');
     classAdd(refs.exercise.factorTwo, 'up');
@@ -86,6 +89,7 @@ function addZindexForElements() {
 
     set.mode = 'challenge';
     markup();
+    setStandartSettings();
     classAdd(refs.mode.challenge, 'up');
     classAdd(refs.exercise.product, 'up');
     classAdd(refs.box.timerParagraphBox, 'up');
@@ -103,5 +107,6 @@ function addZindexForElements() {
       .forEach((box) => classRemove(box, 'up'));
     set.mode = 'auto';
     markup();
+    setStandartSettings();
   }
 }
