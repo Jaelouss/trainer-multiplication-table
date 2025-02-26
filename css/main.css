@@ -1176,7 +1176,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 @media (width > 55.62375rem) {
   .first__off {
-    top: 54%;
+    top: 45%;
   }
 }
 .first__on {
