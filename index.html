@@ -108,8 +108,8 @@
           </button>
         </li>
         <li class="component app visually-hidden" data-box="app">
-          <div class="settings">
-            <div class="settings__inner-left" data-box="settings">
+          <div class="settings" data-box="settings">
+            <div class="settings__inner-left" data-box="settings-radio">
               <p class="settings__paragraph" data-paragraph="multiplicand">
                 Multiplicand
               </p>
@@ -189,7 +189,7 @@
                 Challenge
               </button>
             </div>
-            <div class="settings__inner-right" data-box="settings">
+            <div class="settings__inner-right" data-box="settings-radio">
               <p class="settings__paragraph" data-paragraph="multiplier">
                 Multiplier
               </p>
@@ -384,9 +384,65 @@
             <button class="button modal__button" data-modal="button">Ok</button>
           </div>
         </li>
+        <li
+          class="component overlay overlay__tutorial visually-hidden"
+          data-modal="tutorial"
+        >
+          <div class="elem zero visually-hidden" data-tutor="0">
+            <h2 class="tutor__title zero__title">
+              Що тут робити?<br />
+              Зараз потрібно встановити таймер
+            </h2>
+            <p class="tutor__text zero__time">Клікай та задавай час</p>
+          </div>
+          <div class="elem first visually-hidden" data-tutor="1">
+            <p class="tutor__text first__off">Грай з або без таймера</p>
+            <p class="tutor__text first__on">Вмикай!</p>
+          </div>
+          <div class="elem second visually-hidden" data-tutor="2">
+            <p class="tutor__text second__input">
+              Вводи відповідь і тисни "Enter" або на кнопку
+            </p>
+          </div>
+          <div class="elem third visually-hidden" data-tutor="3">
+            <p class="tutor__text third__settings">
+              Тут встанови рівень складності та обери режим гри
+            </p>
+          </div>
+          <div class="elem four visually-hidden" data-tutor="4">
+            <p class="tutor__text four__menu">
+              Перемикай між вправами та рекордами <br />
+              (режим виклику)
+            </p>
+          </div>
+          <div class="elem five visually-hidden" data-tutor="5">
+            <p class="tutor__text five__manual">
+              Тут можна написати приклад і дізнатись відповідь
+            </p>
+          </div>
+          <div class="elem six visually-hidden" data-tutor="6">
+            <p class="tutor__text six__challenge">
+              Одразу пиши відповідь і погнали!
+            </p>
+            <p class="tutor__text six__time">Таймер стартує автоматично</p>
+          </div>
+          <div class="elem seven visually-hidden" data-tutor="7">
+            <p class="tutor__text seven__settings">
+              Важкість підвищується з кожною правильною відповіддю!
+            </p>
+          </div>
+          <div class="elem eight visually-hidden" data-tutor="8">
+            <p class="tutor__text eight__text">
+              Перевірте свої математичні здібності! Погнали!
+            </p>
+          </div>
+
+          <button class="button button__tutor" data-tutor="next">Next</button>
+        </li>
       </ul>
     </main>
     <footer>
+      <button class="button link__autor" data-button="reset">Reset</button>
       <a
         class="link link__autor button"
         target="_blank"

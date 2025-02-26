@@ -15,6 +15,7 @@ export const set = {
   timerSet: 'off',
   timer: null,
   challengeTimer: ['00', '30'],
+  tutor: 0,
 };
 export const board = {
   user: null,
@@ -35,7 +36,8 @@ export function resetSettings() {
   set.timerSet = 'off';
   set.timer = null;
   set.challengeTimer = ['00', '30'];
-  setLocal(refs.BOARD_KEY, board.markup);
+  set.tutor = 0;
+  setLocal(refs.LOCAL_KEY, set);
   markup();
 }
 

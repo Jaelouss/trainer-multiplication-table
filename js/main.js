@@ -1,6 +1,6 @@
 import refs from './components/refs.js';
 import translate from './components/translate.js';
-import { set, board } from './components/settings.js';
+import { set, board, resetSettings } from './components/settings.js';
 import { setLocal, loadUserSettings } from './components/localStorage.js';
 import { markup, makeTranslate } from './components/markup.js';
 import { resetBoard } from './components/settings.js';
@@ -13,12 +13,14 @@ import {
 } from './components/timer.js';
 import { product, startExercise } from './components/exercise.js';
 import { classAdd } from './components/classChange.js';
+import { openTutor } from './components/tutorial.js';
 
 loadUserSettings(refs.LOCAL_KEY, set);
 loadUserSettings(refs.BOARD_KEY, board.markup);
 makeTranslate(translate, refs, set.lang);
 markup();
 setStandartSettings();
+openTutor();
 
 document.querySelectorAll('input[type="number"]').forEach((input) => {
   input.addEventListener('input', function (event) {
@@ -44,6 +46,17 @@ refs.main.start.addEventListener('click', (event) => {
   setLocal(refs.LOCAL_KEY, set);
   markup();
   setStandartSettings();
+  // openTutor();
+});
+
+refs.tutor.next.addEventListener('click', (event) => {
+  openTutor();
+});
+
+refs.settings.reset.addEventListener('click', (event) => {
+  resetSettings();
+  resetBoard();
+  location.reload();
 });
 
 refs.box.menu.addEventListener('click', (event) => {

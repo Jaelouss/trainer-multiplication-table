@@ -618,6 +618,13 @@ section {
 .link__autor {
   border-radius: 5px;
   border: 1px solid orange;
+  width: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Для WebKit-браузерів (Chrome, Safari, Edge) */
@@ -1020,6 +1027,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main {
+  padding: clamp(1.875rem, 0.453125rem + 5.8333333333vw, 6.25rem);
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1037,6 +1045,21 @@ input[type=number]::-webkit-outer-spin-button {
   top: 0;
   left: 0;
   position: fixed;
+}
+.overlay__tutorial {
+  background-color: rgba(0, 0, 0, 0.66);
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 }
 
 .modal {
@@ -1092,6 +1115,162 @@ input[type=number]::-webkit-outer-spin-button {
   width: 35%;
 }
 
+.button__tutor {
+  border: var(--border-green);
+  background-color: #ffd700;
+  position: absolute;
+  top: 94%;
+}
+
+.tutor__title {
+  font-size: 30px;
+  color: #ffef0c;
+  font-weight: normal;
+}
+.tutor__text {
+  font-size: 30px;
+  color: #ffef0c;
+  font-weight: normal;
+}
+
+.up {
+  position: relative;
+  border: 3px solid orange;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.54);
+}
+.up:not(:disabled) {
+  border: 3px solid orange;
+}
+
+.elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.zero__title {
+  position: absolute;
+  top: 20%;
+}
+.zero__time {
+  position: absolute;
+  top: 60%;
+  text-align: center;
+}
+
+.first__off {
+  rotate: -3deg;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+@media (width > 55.62375rem) {
+  .first__off {
+    top: 54%;
+  }
+}
+.first__on {
+  position: absolute;
+  top: 86%;
+  rotate: 4deg;
+}
+@media (width > 55.62375rem) {
+  .first__on {
+    top: 76%;
+    left: 61%;
+  }
+}
+
+.second__input {
+  position: absolute;
+  top: 29%;
+  left: 7%;
+  rotate: 4deg;
+}
+@media (width > 55.62375rem) {
+  .second__input {
+    max-width: 675px;
+    rotate: 346deg;
+  }
+}
+
+.third__settings {
+  position: absolute;
+  top: 51%;
+  text-align: center;
+}
+@media (width > 55.62375rem) {
+  .third__settings {
+    top: 54%;
+    max-width: 600px;
+  }
+}
+
+.four__menu {
+  position: absolute;
+  top: 51%;
+  text-align: center;
+}
+@media (width > 55.62375rem) {
+  .four__menu {
+    top: 54%;
+  }
+}
+
+.five__manual {
+  position: absolute;
+  top: 59%;
+  text-align: center;
+}
+@media (width > 55.62375rem) {
+  .five__manual {
+    top: 52%;
+    max-width: 600px;
+  }
+}
+
+.six__challenge {
+  position: absolute;
+  top: 25%;
+  left: 21%;
+}
+@media (width > 28.12375rem) {
+  .six__challenge {
+    top: 10%;
+  }
+}
+.six__time {
+  position: absolute;
+  top: 61%;
+  left: 14%;
+}
+
+.seven__settings {
+  position: absolute;
+  top: 54%;
+  left: 6%;
+}
+
+.eight__text {
+  position: absolute;
+  top: 33%;
+  text-align: center;
+}
+@media (width > 55.62375rem) {
+  .eight__text {
+    max-width: 600px;
+  }
+}
+
 .list {
   width: 100%;
   display: -webkit-box;
@@ -1143,6 +1322,7 @@ body {
   background-image: url("../img/1.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 header {
@@ -1170,6 +1350,13 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.3125rem, -0.1953125rem + 2.0833333333vw, 1.875rem);
 }
 
 .nav {

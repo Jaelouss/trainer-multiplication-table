@@ -14,10 +14,12 @@ export default {
     lang: choose('[data-box="lang"]'),
     app: choose('[data-box="app"]'),
     main: choose('[data-box="main"]'),
+    settings: choose('[data-box="settings"]'),
     mode: choose('[data-box="mode"]'),
     exercise: choose('[data-box=exercise]'),
     timer: choose('[data-box="timer"]'),
     board: choose('[data-box="board"]'),
+    timerParagraphBox: choose('.timer__clock'),
   },
   lang: {
     en: choose('[data-lang="en"]'),
@@ -38,6 +40,7 @@ export default {
     challenge: choose('[data-mode="challenge"]'),
   },
   settings: {
+    reset: choose('[data-button="reset"]'),
     paragraphOne: choose('[data-paragraph="multiplicand"]'),
     paragraphTwo: choose('[data-paragraph="multiplier"]'),
     multiplicand: {
@@ -92,6 +95,20 @@ export default {
     right: choose('[data-modal="right"]'),
     wrong: choose('[data-modal="wrong"]'),
     button: choose('[data-modal="button"]'),
+  },
+  tutor: {
+    modal: choose('[data-modal="tutorial"]'),
+    zero: choose('[data-tutor="0"]'),
+    first: choose('[data-tutor="1"]'),
+    second: choose('[data-tutor="2"]'),
+    third: choose('[data-tutor="3"]'),
+    four: choose('[data-tutor="4"]'),
+    five: choose('[data-tutor="5"]'),
+    six: choose('[data-tutor="6"]'),
+    seven: choose('[data-tutor="7"]'),
+    eight: choose('[data-tutor="8"]'),
+    nine: choose('[data-tutor="9"]'),
+    next: choose('[data-tutor="next"]'),
   },
   label: {
     multiplicandRound: choose('[data-label-multiplicand="round"]'),
