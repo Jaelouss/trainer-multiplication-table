@@ -4,7 +4,8 @@ import { board } from './settings.js';
 import { setLocal } from './localStorage.js';
 import translate from './translate.js';
 import { getResult } from './leaderBoard.js';
-import { makeModal } from './markup.js';
+import { makeModal, markup } from './markup.js';
+import { resetFactors } from './exercise.js';
 
 export function formatTime() {
   const timeInMs = Date.now() - board.time;
@@ -139,6 +140,7 @@ export function applyTimerSetting(event) {
     case 'set':
       set.timerSet = set.timerSet === 'off' ? 'on' : 'off';
       if (set.timerSet === 'on' && set.switch === 'on') {
+        resetFactors();
         startTimer();
       } else {
         resetTimer();

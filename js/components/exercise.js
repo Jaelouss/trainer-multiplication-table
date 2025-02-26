@@ -10,6 +10,8 @@ let factorTwo = 1;
 export function resetFactors() {
   factorOne = 1;
   factorTwo = 1;
+  refs.exercise.factorOne.placeholder = factorOne;
+  refs.exercise.factorTwo.placeholder = factorTwo;
 }
 
 export function startExercise() {

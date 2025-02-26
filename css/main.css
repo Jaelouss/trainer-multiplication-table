@@ -1206,4 +1206,8 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.mark__image {
+  width: clamp(1.25rem, 1.046875rem + 0.8333333333vw, 1.875rem);
 }/*# sourceMappingURL=main.css.map */

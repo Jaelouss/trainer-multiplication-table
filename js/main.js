@@ -119,5 +119,3 @@ refs.modal.button.addEventListener('click', (event) => {
 });
 
 refs.board.reset.addEventListener('click', resetBoard);
-
-const input = document.getElementById('myInput');
