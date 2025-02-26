@@ -1042,7 +1042,7 @@ input[type=number]::-webkit-outer-spin-button {
 .modal {
   width: 80%;
   height: 90%;
-  background-image: url(../../img/modal.jpg);
+  background-image: url(../img/modal.jpg);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
