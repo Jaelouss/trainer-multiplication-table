@@ -169,7 +169,7 @@ function setChallengeSetting() {
 
 function challengeRuleCheck() {
   if (board.right.length > 0 && board.right.length <= 15) {
-    set.challengeTimer = ['00', '02'];
+    set.challengeTimer = ['00', '30'];
     factorTwo = 2;
     set.multiplicand = 'random';
     set.subMultiplicand = 'one';
@@ -212,6 +212,6 @@ function challengeRuleCheck() {
     factorOne = randomFactor();
     factorTwo = randomFactor();
   } else if (board.right.length === 100) {
-    console.log('YOU WON');
+    getResult();
   }
 }
