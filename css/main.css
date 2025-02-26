@@ -1033,7 +1033,8 @@ input[type=number]::-webkit-outer-spin-button {
           justify-content: space-evenly;
 }
 .main__paragraph {
-  font-size: clamp(0.875rem, 0.55rem + 1.3333333333vw, 1.875rem);
+  font-size: clamp(1.25rem, 1.046875rem + 0.8333333333vw, 1.875rem);
+  text-align: center;
 }
 
 .overlay {
@@ -1179,8 +1180,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .first__on {
+  left: 58%;
   position: absolute;
-  top: 86%;
+  top: 78%;
   rotate: 4deg;
 }
 @media (width > 55.62375rem) {
@@ -1192,7 +1194,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .second__input {
   position: absolute;
-  top: 29%;
+  top: 23%;
   left: 7%;
   rotate: 4deg;
 }
@@ -1339,7 +1341,10 @@ header {
 }
 
 h1 {
+  font-size: clamp(1.5625rem, 1.0546875rem + 2.0833333333vw, 3.125rem);
+  text-align: center;
   letter-spacing: 0.1875rem;
+  font-weight: normal;
 }
 
 main {

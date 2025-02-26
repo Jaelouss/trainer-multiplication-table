@@ -20,7 +20,6 @@ loadUserSettings(refs.BOARD_KEY, board.markup);
 makeTranslate(translate, refs, set.lang);
 markup();
 setStandartSettings();
-openTutor();
 
 document.querySelectorAll('input[type="number"]').forEach((input) => {
   input.addEventListener('input', function (event) {
@@ -46,7 +45,7 @@ refs.main.start.addEventListener('click', (event) => {
   setLocal(refs.LOCAL_KEY, set);
   markup();
   setStandartSettings();
-  // openTutor();
+  openTutor();
 });
 
 refs.tutor.next.addEventListener('click', (event) => {

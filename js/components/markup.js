@@ -22,7 +22,6 @@ export function markup() {
   addActiveClass(refs.lang, set.lang);
   addActiveClass(refs.mode, set.mode);
 }
-
 export function makeTranslate(translate, refs, lang, prefix = '') {
   const path = translate[lang];
   if (!path) {
@@ -43,8 +42,13 @@ export function makeTranslate(translate, refs, lang, prefix = '') {
         if (!ref) break;
       }
 
-      if (ref && ref.textContent !== undefined) {
-        ref.textContent = value;
+      if (ref) {
+        // Визначаємо, чи є значення HTML-кодом (перевіряємо наявність тегів)
+        if (value.includes('<') && value.includes('>')) {
+          ref.innerHTML = value; // Вставляємо HTML
+        } else {
+          ref.textContent = value; // Інакше вставляємо як текст
+        }
       }
     }
   }

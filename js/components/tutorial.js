@@ -101,8 +101,7 @@ function addZindexForElements() {
     document
       .querySelectorAll('[data-box="settings-radio"]')
       .forEach((box) => classRemove(box, 'up'));
-  } else if (set.tutor === 9) {
-    set.menu = 'main';
+    set.mode = 'auto';
     markup();
   }
 }
