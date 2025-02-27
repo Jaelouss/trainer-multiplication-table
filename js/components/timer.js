@@ -133,7 +133,8 @@ export function applyTimerSetting(event) {
         refs.exercise.next.disabled = true;
         refs.exercise.product.disabled = true;
         refs.timer.input.disabled = false;
-        refs.timer.switch.textContent = translate[set.lang].timer.switch;
+        refs.timer.switch.textContent =
+          set.lang === 'en' ? 'Disable the timer' : 'Вимкнути таймер';
       }
       break;
 

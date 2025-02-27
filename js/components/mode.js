@@ -52,8 +52,6 @@ export function setStandartSettings() {
   refs.timer.input.disabled = true;
 
   if (set.mode === 'auto') {
-    set.switch = 'on';
-
     refs.settings.multiplicand.round.disabled = false;
     refs.settings.multiplicand.random.disabled = false;
     refs.settings.multiplicand.round.checked = true;
@@ -62,13 +60,13 @@ export function setStandartSettings() {
     refs.settings.multiplier.random.disabled = false;
     refs.settings.multiplier.round.checked = true;
 
-    refs.exercise.next.disabled = true;
-    refs.exercise.product.disabled = true;
+    refs.exercise.next.disabled = false;
+    refs.exercise.product.disabled = false;
     refs.exercise.factorOne.disabled = true;
     refs.exercise.factorTwo.disabled = true;
 
     refs.timer.switch.disabled = false;
-    refs.timer.input.disabled = false;
+    refs.timer.input.disabled = true;
   } else if (set.mode === 'manual') {
     refs.exercise.factorOne.disabled = false;
     refs.exercise.factorOne.value = 1;

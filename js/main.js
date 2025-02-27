@@ -18,8 +18,8 @@ import { openTutor } from './components/tutorial.js';
 loadUserSettings(refs.LOCAL_KEY, set);
 loadUserSettings(refs.BOARD_KEY, board.markup);
 makeTranslate(translate, refs, set.lang);
-markup();
 setStandartSettings();
+markup();
 
 document.querySelectorAll('input[type="number"]').forEach((input) => {
   input.addEventListener('input', function (event) {

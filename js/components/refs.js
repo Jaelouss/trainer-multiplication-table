@@ -114,7 +114,7 @@ export default {
     zeroTitle: choose('.zero__title'),
     zeroTime: choose('.zero__time'),
     firstOff: choose('.first__off'),
-    firstOn: choose('.first__On'),
+    firstOn: choose('.first__on'),
     secondInput: choose('.second__input'),
     thirdSettings: choose('.third__settings'),
     fourMenu: choose('.four__menu'),

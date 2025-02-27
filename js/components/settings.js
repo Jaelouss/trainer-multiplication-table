@@ -11,7 +11,7 @@ export const set = {
   multiplier: 'round',
   subMultiplicand: 'one',
   subMultiplier: 'one',
-  switch: 'on',
+  switch: 'off',
   timerSet: 'off',
   timer: null,
   challengeTimer: ['00', '30'],
@@ -32,7 +32,7 @@ export function resetSettings() {
   set.subMultiplicand = 'one';
   set.multiplier = 'round';
   set.subMultiplier = 'one';
-  set.switch = 'on';
+  set.switch = 'off';
   set.timerSet = 'off';
   set.timer = null;
   set.challengeTimer = ['00', '30'];

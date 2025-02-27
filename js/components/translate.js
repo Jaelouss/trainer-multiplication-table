@@ -21,7 +21,7 @@ export default {
     },
     timer: {
       set: 'Set!',
-      switch: 'Disable the timer',
+      switch: 'Enable the timer',
     },
     exercise: {
       next: 'Next!',
@@ -49,7 +49,7 @@ export default {
       sixChallenge: "Write a reply right away and let's go!",
       sixTime: 'The timer starts automatically',
       sevenSettings: 'The difficulty increases with each correct answer!',
-      eightText: 'Check your mathematical abilities! Go ahead!',
+      eightText: 'Go ahead and check your mathematical abilities! ',
     },
     label: {
       multiplicandRound: 'Round',
@@ -85,7 +85,7 @@ export default {
     },
     timer: {
       set: 'Встановити!',
-      switch: 'Вимкнути таймер',
+      switch: 'Активувати таймер',
     },
     exercise: {
       next: 'Далі!',
